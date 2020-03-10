@@ -1,0 +1,27 @@
+{
+  "oauthScopes": ["https://www.googleapis.com/auth/gmail.addons.execute", "https://www.googleapis.com/auth/gmail.addons.current.message.metadata", "https://www.googleapis.com/auth/gmail.addons.current.action.compose", "https://www.googleapis.com/auth/drive"],
+  "runtimeVersion": "V8",
+  "gmail": {
+    "name": "Insert HTML",
+    "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/label_googblue_24dp.png",
+    "contextualTriggers": [{
+      "unconditional": {
+      },
+      "onTriggerFunction": "getContextualUI"
+    }],
+    "primaryColor": "#4285F4",
+    "secondaryColor": "#4285F4",
+    "openLinkUrlPrefixes": ["https://mail.google.com/"],
+    "composeTrigger": {
+      "selectActions": [{
+        "text": "Add html to email",
+        "runFunction": "getComposeUI"
+      }],
+      "draftAccess": "METADATA"
+    },
+    "homepageTrigger": {
+            "runFunction": "getHomepageUI",
+            "enabled": true
+    }
+  }
+}
